@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="./app-icon.svg" />
+  <link href="main.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Example Vite PWA">
+  <link rel="apple-touch-icon" href="./icons/icon-192x192.png" sizes="192x192">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <title>Restaurant page</title>
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+/>
+
+<link
+rel="stylesheet"
+href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+/>
+
+    <script type="module" crossorigin src="./assets/index-bcfc937c.js"></script>
+    <link rel="stylesheet" href="./assets/index-9bb0d1be.css">
+  <link rel="manifest" href="./manifest.webmanifest"><script id="vite-plugin-pwa:register-sw" src="./registerSW.js"></script></head>
+
+  <body>
+    <nav>
+      <ul>
+        <li><h1>Lounas</h1></li>
+      </ul>
+      <div id="theme">
+      <div id="name"></div>
+      <button id="logout-button">Log out</button>
+      <button id="theme-toggle">
+        <i id="theme-icon" class="fas fa-sun"></i> <!-- Sun icon for light theme -->
+      </button>
+
+    </div>
+
+    </nav>
+    <main>
+        <section id="search-section">
+          <input
+            type="text"
+            id="search-input"
+            placeholder="Search restaurants..."
+          />
+          <button id="search-button">Search</button>
+        </section>
+        <div id="tablemap">
+          <table>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Company</th>
+                <th>Address</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- add restaurants here -->
+            </tbody>
+          </table>
+          <div id="map" style="height: 400px"></div>
+        </div>
+      </section>
+      <dialog>
+        <div>
+          <button id="close-modal">&#215;</button>
+        </div>
+        <div id="daily-weekly-menu">
+        <button id="show-daily-menu">Day Menu</button>
+        <button id="show-weekly-menu">week Menu</button>
+      </div>
+        <div id="daily-menu" class="hidden">Daily Menu Content</div>
+        <div id="weekly-menu" class="hidden">Weekly Menu Content</div>
+        <div id="info">
+          <!-- ++ restaurant info when restaurant is clicked -->
+        </div>
+      </dialog>
+    </main>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <footer>
+      <h4>&COPY; Copyright, G</h4>
+    </footer>
+
+    
+
+
+  </body>
+</html>
